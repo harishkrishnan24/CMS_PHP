@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 include "includes/db.php";
 include "includes/header.php";
@@ -14,17 +14,17 @@ include "includes/navigation.php";
         <!-- Blog Entries Column -->
         <div class="col-md-8">
 
-            <?php 
-                $query = 'SELECT * FROM posts';
-                $select_all_posts_query = mysqli_query($connection, $query);
+            <?php
+            $query = 'SELECT * FROM posts';
+            $select_all_posts_query = mysqli_query($connection, $query);
 
-                while($row = mysqli_fetch_assoc($select_all_posts_query)){
-                    $post_title = $row['post_title'];
-                    $post_author = $row['post_author'];
-                    $post_date = $row['post_date'];
-                    $post_image = $row['post_image'];
-                    $post_content = $row['post_content'];
-                    ?>
+            while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
+                $post_title = $row['post_title'];
+                $post_author = $row['post_author'];
+                $post_date = $row['post_date'];
+                $post_image = $row['post_image'];
+                $post_content = $row['post_content'];
+                ?>
             <h1 class="page-header">
                 Page Heading
                 <small>Secondary Text</small>
@@ -64,8 +64,8 @@ include "includes/navigation.php";
     <hr>
 
 
-    <?php 
+    <?php
 
-include "includes/footer.php";
+    include "includes/footer.php";
 
-?>
+    ?>
